@@ -43,6 +43,5 @@ class Produto(Base):
     def adiciona_comentario(self, comentario:Comentario):
         """ Adiciona um novo comentário ao Produto.
         """
-        self.comentarios.append(comentario)
-        
+        self.comentarios.append(comentario)        
         
