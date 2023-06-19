@@ -24,3 +24,39 @@ def home():
     """Redireciona para /openapi, tela que permite a escolha do estilo de documentação.
     """
     return redirect('/openapi')
+
+
+@app.post('/produto', tags=[produto_tag],
+    responses={"200": ProdutoViewSchema, "409": ErrorSchema, "400": ErrorSchema})
+def add_produto(form: ProdutoSchema):
+    """Adiciona um novo Produto à base de dados
+
+    Retorna uma representação dos produtos e comentários associados.
+    """
+    produto = Produto(
+        nome=form.nome, 
+        quantidade=form.quantidade, 
+        valor=form.valor)
+    logger.debug(f"Adicionando produto de nome: '{produto.nome}'")
+    try:
+        # criando conexão com a base
+        session = Session()
+        # adicionando produto
+        session.add(produto)
+        # efetivando o comando de adição de novo item na tabela
+        session.commit()
+        logger.debug(f"Adicionando produto de nome: '{produto.nome}'")
+        return apresenta_produto(produto), 200
+    
+    except IntegrityError as e:
+        # como a duplicidade do nome é a provável razão do IntegrityError
+        error_msg = "Produto de mesmo nome já salvo na base."
+        logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
+        return {"message": error_msg}, 409
+    
+    except Exception as e:
+        # caso ocorra um erro fora do previsto
+        error_msg = "Não foi possível salvar novo item."
+        logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
+        return {"message": error_msg}, 400
+    
