@@ -15,9 +15,9 @@ class ProdutoSchema(BaseModel):
 
 class ProdutoBuscaSchema(BaseModel):
     """ Define como deve ser a estrutura que representa a busca.
-        Que será feita apenas com base no id do produto.
+        Que será feita apenas com base no nome do produto.
     """
-    id: int = 1
+    nome: str = "Guitarra Elétrica Gibson"
 
 
 class ProdutoViewSchema(BaseModel):
@@ -65,3 +65,10 @@ def apresenta_produtos(produtos: List[Produto]):
         
     return {"produtos": result}
 
+
+class ProdutoDelSchema(BaseModel):
+    """ Define como deve ser a estrutura do dado retornado após uma requisição
+        de remoção.
+    """
+    message: str
+    nome: str

@@ -87,25 +87,51 @@ def get_produtos():
 @app.get('/produto', tags=[produto_tag], 
          responses={"200": ProdutoViewSchema, "404": ErrorSchema})
 def get_produto(query: ProdutoBuscaSchema):
-    """ Faz a busca por um Produto a partir do id do produto
+    """ Faz a busca por um Produto a partir do nome do produto
     
     Retorna uma representação do produto e comentários associados.
     """
-    produto_id = query.id
-    logger.debug(f"Coletando dados sobre o produto #{produto_id}")
+    produto_nome = query.nome
+    logger.debug(f"Coletando dados sobre o produto #{produto_nome}")
     # criando conexão com a base
     session = Session()
     # fazendo a busca
-    produto = session.query(Produto).filter(Produto.id == produto_id).first()
+    produto = session.query(Produto).filter(Produto.nome == produto_nome).first()
     
     if not produto:
         # se o produto não foi encontrado
         error_msg = "Produto não encontrado na base."
-        logger.warning(f"Erro ao buscar produto '{produto_id}', {error_msg}")
+        logger.warning(f"Erro ao buscar produto '{produto_nome}', {error_msg}")
         return {"message": error_msg}, 404
     else:
         logger.debug(f"Produto encontrado: '{produto.nome}'")
         # retorna a representação de produto
         return apresenta_produto(produto), 200
     
+    
+@app.delete('/produto', tags=[produto_tag],
+            responses={"200": ProdutoDelSchema, "404": ErrorSchema})
+def del_produto(query: ProdutoBuscaSchema):
+    """ Deleta um Produto a partir do nome do produto informado
+    
+    Retorna uma mensagem de confirmação da remoção.
+    """
+    produto_nome = unquote(unquote(query.nome))
+    print(produto_nome)
+    logger.debug(f"Deletando dados sobre produto #{produto_nome}")
+    # criando conexão com a base
+    session = Session()
+    # fazendo a remoção
+    count = session.query(Produto).filter(Produto.nome == produto_nome).delete()
+    session.commit()
+    
+    if count:
+        # retorna a representação da mensagem de confirmação
+        logger.debug(f"Deletado produto #{produto_nome}")
+        return {"message": "Produto removido", "nome": produto_nome}
+    else:
+        # se o produto não foi encontrado
+        error_msg = "Produto não encontrado na base."
+        logger.warning(f"Erro ao deletar produto #'{produto_nome}', ,{error_msg}")
+        return {"message": error_msg}, 404 
     
