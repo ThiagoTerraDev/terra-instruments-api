@@ -135,3 +135,36 @@ def del_produto(query: ProdutoBuscaSchema):
         logger.warning(f"Erro ao deletar produto #'{produto_nome}', ,{error_msg}")
         return {"message": error_msg}, 404 
     
+
+@app.post('/comentario', tags=[comentarios_tag],
+          responses={"200": ProdutoViewSchema, "404": ErrorSchema})
+def add_comentario(form: ComentarioSchema):
+    """ Adiciona um novo comentário à um produto cadastrado na base, identificado pelo id
+    
+    Retorna uma representação dos produtos e comentários associados.
+    """
+    produto_id = form.produto_id
+    logger.debug(f"Adicionando comentários ao produto #{produto_id}")
+    # criando conexão com a base
+    session = Session()
+    # fazendo a busca pelo produto
+    produto = session.query(Produto).filter(Produto.id == produto_id).first()
+    
+    if not produto:
+        # se produto não encontrado
+        error_msg = "Produto não encontrado na base."
+        logger.warning(f"Erro ao adicionar comentário ao produto '{produto_id}', {error_msg}")
+        return {"message": error_msg}, 404
+    
+    # criando o comentário
+    texto = form.texto
+    comentario = Comentario(texto)
+    
+    # adicionando o comentário ao produto
+    produto.adiciona_comentario(comentario)
+    session.commit()
+    
+    logger.debug(f"Adicionado comentário ao produto #{produto_id}")
+    
+    # retorna a representação de produto
+    return apresenta_produto(produto), 200
