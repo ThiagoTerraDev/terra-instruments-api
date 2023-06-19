@@ -36,3 +36,25 @@ def apresenta_produto(produto: Produto):
         "total_comentarios": len(produto.comentarios),
         "comentarios": [{"texto": c.texto} for c in produto.comentarios]
     }
+
+
+class ListagemProdutosSchema(BaseModel):
+    """ Define como uma listagem de produtos será retornada.
+    """
+    produtos:List[ProdutoSchema]
+    
+    
+def apresenta_produtos(produtos: List[Produto]):
+    """ Retorna uma representação do produto seguindo o schema definido em
+        ProdutoViewSchema.
+    """
+    result = []
+    for produto in produtos:
+        result.append({
+            "nome": produto.nome,
+            "quantidade": produto.quantidade,
+            "valor": produto.valor,            
+        })
+        
+    return {"produtos": result}
+

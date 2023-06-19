@@ -60,3 +60,26 @@ def add_produto(form: ProdutoSchema):
         logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
         return {"message": error_msg}, 400
     
+
+@app.get('/produtos', tags=[produto_tag], 
+         responses={"200": ListagemProdutosSchema, "404": ErrorSchema})
+def get_produtos():
+    """ Faz a busca por todos os Produtos cadastrados
+    
+    Retorna uma representação da listagem de produtos.
+    """
+    logger.debug(f"Coletando produtos ")
+    # criando conexão com a base
+    session = Session()
+    # fazendo a busca
+    produtos = session.query(Produto).all()
+    
+    if not produtos:
+        # se não há produtos cadastrados
+        return {"produtos": []}, 200
+    else:
+        logger.debug(f"%d produtos encontrados" % len(produtos))
+        # retorna a representação de produto
+        print(produtos)
+        return apresenta_produtos(produtos), 200
+
