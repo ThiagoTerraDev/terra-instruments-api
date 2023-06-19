@@ -13,6 +13,13 @@ class ProdutoSchema(BaseModel):
     valor: float = 5000.00
 
 
+class ProdutoBuscaSchema(BaseModel):
+    """ Define como deve ser a estrutura que representa a busca.
+        Que será feita apenas com base no id do produto.
+    """
+    id: int = 1
+
+
 class ProdutoViewSchema(BaseModel):
     """ Define como um produto será retornado: produto + comentários
     """

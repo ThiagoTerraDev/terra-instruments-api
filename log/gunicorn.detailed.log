@@ -1,13 +1,56 @@
-[2023-06-19 10:45:09,956] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:45:09] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:45:10,035] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:45:10] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:45:10,075] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:45:10] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:46:47,945] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:46:47] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:49:56,485] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:49:56] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:53:11,759] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:53:11] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:53:11,794] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:53:11] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:53:11,814] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:53:11] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:53:11,817] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:53:11] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:53:12,084] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:53:12] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:53:12,087] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:53:12] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:53:12,223] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:53:12] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-06-19 10:53:31,994] INFO _log() L224  127.0.0.1 - - [19/Jun/2023 10:53:31] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:40:29,681] ERROR log_exception() L1449 Exception on /produto [GET] - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\flask_openapi3\scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+           ^^^^^^^^^^^^
+  File "C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\app.py", line 94, in get_produto
+    produto_id = query.id
+                 ^^^^^^^^
+AttributeError: 'ProdutoBuscaSchema' object has no attribute 'id'
+[2023-06-19 11:40:29,690] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:40:29] "[35m[1mGET /produto?nome=1 HTTP/1.1[0m" 500 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:47,325] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.56:5000 (Press CTRL+C to quit) - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:54,576] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:54] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:54,610] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:54] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:54,887] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:54] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:54,889] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:54] "[36mGET /openapi/static/images/redoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:54,891] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:54] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:54,922] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:54] "[36mGET /openapi/static/images/rapidoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:56,344] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:56] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:56,369] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:56] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:56,375] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:56] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:56,376] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:56] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:56,526] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:56] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:54:56,576] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:54:56] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:56:15,331] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.56:5000 (Press CTRL+C to quit) - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:56:15,335] INFO _log() L224   * Restarting with stat - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:56:29,666] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:56:29] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:56:29,667] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:56:29] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:56:29,667] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:56:29] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:56:29,872] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:56:29] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:56:29,941] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:56:29] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:56:48,173] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:56:48] "GET /produto?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-06-19 11:57:44,465] INFO _log() L224  192.168.0.56 - - [19/Jun/2023 11:57:44] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\thiag\OneDrive\pos-graduacao-puc\meu-mvp-sprint-1-desenv-full-stack-basico\terra_instruments_api\venv\Lib\site-packages\werkzeug\_internal.py L224 
