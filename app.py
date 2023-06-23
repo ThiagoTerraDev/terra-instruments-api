@@ -168,3 +168,31 @@ def add_comentario(form: ComentarioSchema):
     
     # retorna a representação de produto
     return apresenta_produto(produto), 200
+
+
+@app.delete('/comentario', tags=[comentarios_tag],
+            responses={"200": ComentarioDelSchema, "404": ErrorSchema})
+def del_comentario(query: ComentarioBuscaSchema):
+    """ Deleta um Comentário a partir do ID do produto informado
+    
+    Retorna uma mensagem de confirmação da remoção.
+    """
+    produto_id_coment = unquote(unquote(str(query.produto_id)))
+    print(produto_id_coment)
+    logger.debug(f"Deletando comentários do produto #{produto_id_coment}")
+    # criando conexão com a base
+    session = Session()
+    # fazendo a remoção
+    count = session.query(Comentario).filter(Comentario.produto_id == produto_id_coment).delete()
+    session.commit()
+    
+    if count:
+        # retorna a representação da mensagem de confirmação
+        logger.debug(f"Deletado comentário(s) do produto #{produto_id_coment}")
+        return {"message": "Comentário(s) removido(s) do produto associado", "id": produto_id_coment}
+    else:
+        # se o produto não foi encontrado
+        error_msg = "Produto não encontrado na base."
+        logger.warning(f"Erro ao deletar comentário(s) do produto #'{produto_id_coment}', ,{error_msg}")
+        return {"message": error_msg}, 404
+    

@@ -16,7 +16,7 @@ class Comentario(Base):
     # Aqui está sendo definido a coluna 'produto' que vai guardar
     # a referencia ao produto, a chave estrangeira que relaciona
     # um produto ao comentário.
-    produto = Column(Integer, ForeignKey("produto.pk_produto"), nullable=False)
+    produto_id = Column(Integer, ForeignKey("produto.pk_produto"), nullable=False)
     
     def __init__(self, texto:str, data_insercao:Union[DateTime, None] = None):
         """
