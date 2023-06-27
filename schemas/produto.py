@@ -11,6 +11,7 @@ class ProdutoSchema(BaseModel):
     nome: str = "Guitarra Elétrica Gibson"
     quantidade: Optional[int] = 3
     valor: float = 5000.00
+    id: int = 1
 
 
 class ProdutoBuscaSchema(BaseModel):
@@ -60,7 +61,8 @@ def apresenta_produtos(produtos: List[Produto]):
         result.append({
             "nome": produto.nome,
             "quantidade": produto.quantidade,
-            "valor": produto.valor,            
+            "valor": produto.valor,
+            "id": produto.id,     
         })
         
     return {"produtos": result}
