@@ -4,15 +4,45 @@ Este projeto faz parte do MVP da Disciplina Sprint I: Desenvolvimento Full Stack
 
 
 ---
-## Observação importante
+## Observação 1
 
-Ao clonar este repositório, delete a pasta `venv`, para que você possa criar o seu ambiente virtual e instalar as dependências/bibliotecas.
+A pasta `venv`, presente neste repositório, representa o ambiente virtual que utilizei para construir este projeto.
+Nesta pasta já se encontram todas as dependências e bibliotecas necessárias para executar esta API.
 
 
 ---
-## Criando o ambiente virtual
+## Como executar a API
 
-Abra um novo terminal e digite o seguinte comando:
+Após clonar o repositório, é necessário ir ao diretório raiz, pelo terminal, para poder ativar o ambiente virtual.
+
+Ative o ambiente virtual digitando o seguinte comando:
+```
+.\venv\Scripts\Activate.ps1   
+```
+
+Para executar a API, basta executar:
+```
+(venv) flask run --host 0.0.0.0 --port 5000
+```
+
+Em modo de desenvolvimento é recomendado executar utilizando o parâmetro reload, que reiniciará o servidor automaticamente após uma mudança no código fonte. 
+```
+(venv) flask run --host 0.0.0.0 --port 5000 --reload
+```
+
+> Abra o [http://localhost:5000/#/](http://localhost:5000/#/) no navegador para verificar o status da API em execução.
+
+
+---
+## Observação 2
+
+Em um contexto em que a pasta `venv`, presente neste repositório, se encontre inexistente ou indisponível na sua máquina, siga os seguintes passos.
+
+
+---
+### Passo 1: Criando um ambiente virtual
+
+Após clonar o repositório, abra um novo terminal e digite o seguinte comando:
 ```
 python -m venv venv
 ```
@@ -25,23 +55,23 @@ Ative o ambiente virtual digitando o seguinte comando:
 
 
 ---
-## Como executar 
+### Passo 2: Executando a API
 
 Será necessário ter todas as libs python listadas no `requirements.txt` instaladas.
-Após clonar o repositório e criar o ambiente virtual, é necessário ir ao diretório raiz, pelo terminal, para poder executar os comandos descritos abaixo.
+Após clonar o repositório e ativar o ambiente virtual (veja o passo 1), é necessário ir ao diretório raiz, pelo terminal, para poder executar os comandos descritos abaixo.
 ```
-pip install -r requirements.txt
+(venv) pip install -r requirements.txt
 ```
 > Este comando instala as dependências/bibliotecas, descritas no arquivo `requirements.txt`.
 
 Para executar a API, basta executar:
 ```
-flask run --host 0.0.0.0 --port 5000
+(venv) flask run --host 0.0.0.0 --port 5000
 ```
 
 Em modo de desenvolvimento é recomendado executar utilizando o parâmetro reload, que reiniciará o servidor automaticamente após uma mudança no código fonte. 
 ```
-flask run --host 0.0.0.0 --port 5000 --reload
+(venv) flask run --host 0.0.0.0 --port 5000 --reload
 ```
 
 > Abra o [http://localhost:5000/#/](http://localhost:5000/#/) no navegador para verificar o status da API em execução.
