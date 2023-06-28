@@ -6,7 +6,7 @@ Este projeto faz parte do MVP da Disciplina Sprint I: Desenvolvimento Full Stack
 ---
 ## Observação 1
 
-A pasta `venv`, presente neste repositório, representa o ambiente virtual que utilizei para construir este projeto.
+A pasta `venv`, presente neste repositório, representa o ambiente virtual utilizado para construir este projeto.
 Nesta pasta já se encontram todas as dependências e bibliotecas necessárias para executar esta API.
 
 
