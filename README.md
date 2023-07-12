@@ -1,6 +1,10 @@
 # Terra Instruments API
 
 Este projeto faz parte do MVP da Disciplina Sprint I: Desenvolvimento Full Stack Básico, pós-graduação PUC-Rio.
+O objetivo desta aplicação é desempenhar o controle e a visualização dos recursos disponibilizados pela loja fictícia chamada Terra Instruments, 
+a qual vende produtos para músicos, em geral.
+Esta aplicação permite aos usuários consultar, adicionar ou deletar produtos cadastrados no banco de dados, bem como adicionar ou deletar comentários associados
+aos produtos.
 
 
 ---
